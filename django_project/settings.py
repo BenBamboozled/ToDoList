@@ -90,7 +90,7 @@ else:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'listDB',
+        'NAME': 'listdb',
         'USER': 'ben',
         'PASSWORD': config['DB_PASS'],
         'HOST': 'localhost',
