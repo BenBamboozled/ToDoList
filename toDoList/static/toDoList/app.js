@@ -60,17 +60,20 @@ $(document).ready(function() {
 
 	 });
 
-	 $("#box").click( function(event) {
-		event.preventDefault();
-		$('#box').toggleClass(CHECK);
-		$('#box').toggleClass(UNCHECK);
+	
 
-		$("#task").toggleClass(LINE_THROUGH);
-		$("#date").toggleClass(LINE_THROUGH);
+	 $( "i[job='complete']" ).click( function(event) {		
+		event.preventDefault();
+
+		$(this).toggleClass(CHECK);
+		$(this).toggleClass(UNCHECK);
+
+		$(this).parent().children("#task").toggleClass(LINE_THROUGH);
+		$(this).parent().children("#date").toggleClass(LINE_THROUGH);
 
 		$.ajax({
 			type: 'GET',
-			url: '/complete/' + $('#box').attr("value"),
+			url: '/complete/' + $(this).parent().children("#box").attr("value"),
 			success: function(){
 			}
 
@@ -79,15 +82,15 @@ $(document).ready(function() {
 	 });
 
 
-	 $("#trash").click( function(event) {
+	 $("i[job='delete']").click( function(event) {
 		event.preventDefault();
-		task = $('#task').html()
+		task = $(this).parent().children("#task").html()
 		if(confirm("Are you sure you want to delete \"" + task + "\" from the list?")){
 			$.ajax({
 				type: 'POST',
 				url: '/task/delete/',
 				data: {
-					value:$('#box').attr("value"), 
+					value:$(this).parent().children("#box").attr("value"), 
 					csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
 				},
 				success: function(){
