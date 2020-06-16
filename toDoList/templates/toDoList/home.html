@@ -22,6 +22,28 @@
 
     </div>
 
+    <form id="new-task">{% csrf_token %}
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+      
+            <div class="input-group input-group-lg">
+              <input type="text" id="add-task" class="form-control col-10" aria-label="Task" placeholder="Task">
+              <input type="date" id="add-date" class="form-control col-2" aria-label="Date" placeholder="Date">
+
+              <div class="input-group-append btn-group dropup">
+                <button type="button submit" class="btn btn-outline-secondary" id="add">Add Item</button>
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu ">
+                  <a class="dropdown-item" href="" id="clear-input">Clear Input Area</a>
+                </div>
+              </div>
+            </div>
+          
+        </nav>
+
+    </form>
+
 
 {% endfor %}
 {% endif %}

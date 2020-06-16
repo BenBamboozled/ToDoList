@@ -29,7 +29,7 @@ SECRET_KEY = config['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['159.65.100.39']
+ALLOWED_HOSTS = ['todo.benjam.me','159.65.100.39']
 
 
 # Application definition
