@@ -51,7 +51,7 @@ $(document).ready(function() {
 				type: 'GET',
 				url: '/list/clear/',
 				success: function(){
-					window.location.reload();
+					window.location.assign('/');
 				}
 	
 			});
@@ -94,7 +94,7 @@ $(document).ready(function() {
 					csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
 				},
 				success: function(){
-					window.location.reload();
+					window.location.assign('/');
 				}
 	
 			});
