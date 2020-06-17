@@ -2,13 +2,13 @@
 {% extends "toDoList/base.html" %}
 
 {% block content %}
-<div class="row item">
+<div class="row item">{% csrf_token %}
     {% if object.complete %}
-    <i class="col far fa-check-square" id="box" value="{{ object.id  }}"></i>
+    <i class="col far fa-check-square" id="box" job="complete" value="{{ object.id  }}"></i>
     <div class="col-6 lineThrough" id="task">{{ object.task }}</div>
     <div class="col-3 lineThrough" id="date">{{ object.date|date:"n-d-y" }}</div>
     {% else %}
-    <i class="col far fa-square " id="box" value="{{ object.id  }}"></i>
+    <i class="col far fa-square " id="box" job="complete" value="{{ object.id  }}" ></i>
     <div class="col-6" id="task">{{ object.task }}</div>
     <div class="col-3" id="date">{{ object.date|date:"n-d-y" }}</div>
     {% endif %}
