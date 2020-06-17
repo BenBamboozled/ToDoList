@@ -5,13 +5,22 @@
 <div class="row item">
     {% if object.complete %}
     <i class="col far fa-check-square" id="box"></i>
+    <div class="col-6 lineThrough" id="task">{{ object.task }}</div>
+    <div class="col-3 lineThrough" id="date">{{ object.date|date:"n-d-y" }}</div>
     {% else %}
     <i class="col far fa-square " id="box"></i>
+    <div class="col-6" id="task">{{ object.task }}</div>
+    <div class="col-3" id="date">{{ object.date|date:"n-d-y" }}</div>
     {% endif %}
-    <div class="col-8" id="task">{{ object.task }}</div>
-    <div class="col-2" id="date">{{ object.date|date:"n-d-y" }}</div>
-    <a class="col fa fa-trash" id="trash" href="task/{{ object.id }}/delete" style="color: black;"></a>
+    
+    <i class="col fa fa-trash" id="trash"  job="delete"></i>
 
+
+</div>
+
+<div class="row">
+    
+    <div class="col-8" id="task">{{ object.task }}</div>
 
 </div>
 

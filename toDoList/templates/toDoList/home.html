@@ -10,11 +10,11 @@
     <div class="row item"  id="list" >
         {% if task.complete %}
         <i class="col far fa-check-square" id="box" job="complete" value="{{ task.id  }}"></i>
-        <div class="col-6 lineThrough" id="task">{{ task.task }}</div>
+        <div class="col-6 lineThrough" id="task" job="task-detail">{{ task.task }}</div>
         <div class="col-3 lineThrough" id="date">{{ task.date|date:"n-d-y" }}</div>
         {% else %}
         <i class="col far fa-square" id="box" job="complete" value="{{ task.id  }}"></i>
-        <div class="col-6" id="task">{{ task.task }}</div>
+        <div class="col-6" id="task" job="task-detail">{{ task.task }}</div>
         <div class="col-3" id="date">{{ task.date|date:"n-d-y" }}</div>
         {% endif %}
         

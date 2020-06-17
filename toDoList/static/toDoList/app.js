@@ -102,6 +102,17 @@ $(document).ready(function() {
 
 	 });
 
+	 
+	 $("i[job='task-detail']").click( function(event) {
+		event.preventDefault();
+		id = $(this).parent().children("#box").attr("value")
+		
+				
+		window.location.replace('/task/'+id);
+				
+	
+		});
+
 
 	 $("#clear-input").click( function(event) {
 		event.preventDefault();
