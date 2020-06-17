@@ -8,8 +8,7 @@
     background: green;
 }
 
-#main-heading
-{
+#main-heading{
 color:white;
 background: darkgreen;
 padding-left: none;
@@ -18,8 +17,7 @@ height: 25px;
 border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-#main
-{
+#main{
 padding-top: 125px;
 padding-left: none;
 }
@@ -28,21 +26,16 @@ padding-left: none;
 .item{
     height: 50px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-
-
-
 }
 
 .heading{
     height: 25px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     font-size: 15px;
-
-
 }
 
 #box{
-    font-size: 35px;
+    font-size: 200%;
     padding-top: 7px;
 }
 
@@ -51,9 +44,12 @@ padding-left: none;
 }
 
 #date{
-    font-size: 18px;
-    padding-top: 7px;
+    font-size: 75%;
+    padding-top: 15px;
+    overflow:hidden;
+    white-space: nowrap;
 }
+
 #user-links{
     color: white;
     
@@ -65,21 +61,22 @@ padding-left: none;
 }
 
 #task{
-    font-size: 35px;
+    font-size: 200%;
+    overflow:hidden;
+    white-space: nowrap;
 }
 
 
-
 #trash{
-    font-size: 25px;
-    padding-top: 7px;
+    font-size: 150%;
+    padding-top: 10px;
     color: black;
     text-decoration: none;
 }
 
 #trash:hover{
     color: red;
-    font-size: 35px;
+    font-size: 200%;
 }
 
 .lineThrough{
