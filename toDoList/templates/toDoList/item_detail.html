@@ -4,11 +4,11 @@
 {% block content %}
 <div class="row item">
     {% if object.complete %}
-    <i class="col far fa-check-square" id="box"></i>
+    <i class="col far fa-check-square" id="box" value="{{ object.id  }}"></i>
     <div class="col-6 lineThrough" id="task">{{ object.task }}</div>
     <div class="col-3 lineThrough" id="date">{{ object.date|date:"n-d-y" }}</div>
     {% else %}
-    <i class="col far fa-square " id="box"></i>
+    <i class="col far fa-square " id="box" value="{{ object.id  }}"></i>
     <div class="col-6" id="task">{{ object.task }}</div>
     <div class="col-3" id="date">{{ object.date|date:"n-d-y" }}</div>
     {% endif %}
