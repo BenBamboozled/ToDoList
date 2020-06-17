@@ -62,7 +62,7 @@ $(document).ready(function() {
 
 	
 
-	 $( "[job='complete']" ).click( function(event) {		
+	 $( "i[job='complete']" ).click( function(event) {		
 		event.preventDefault();
 
 		$(this).toggleClass(CHECK);
@@ -103,7 +103,7 @@ $(document).ready(function() {
 	 });
 
 	 
-	 $("i[job='task-detail']").click( function(event) {
+	 $("[job='task-detail']").click( function(event) {
 		event.preventDefault();
 		id = $(this).parent().children("#box").attr("value")
 		
