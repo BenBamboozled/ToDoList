@@ -108,7 +108,7 @@ $(document).ready(function() {
 		id = $(this).parent().children("#box").attr("value")
 		
 				
-		window.location.replace('/task/'+id);
+		window.location.assign('/task/'+id);
 				
 	
 		});
