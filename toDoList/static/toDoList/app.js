@@ -62,7 +62,7 @@ $(document).ready(function() {
 
 	
 
-	 $( "i[job='complete']" ).click( function(event) {		
+	 $( "[job='complete']" ).click( function(event) {		
 		event.preventDefault();
 
 		$(this).toggleClass(CHECK);
